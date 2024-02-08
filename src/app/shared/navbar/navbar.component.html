@@ -1,0 +1,113 @@
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+
+
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+
+                </li>
+
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+
+                        <button (click)="salir()" type="button" class="btn btn-block bg-gradient-danger">   <i class="fa fa-window-close"></i>&nbsp; Salir</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar  elevation-4" style="position: fixed; ">
+            <!-- Brand Logo -->
+            <a class="brand-link">
+                <img src="../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Divisas</span>
+                <br>
+                <br>
+
+
+
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h6 style="color:  #007bff;">Usuario</h6>
+                <h6 style="color: black;">{{nombre_usuario}}</h6>
+                <br>
+                <h5 style="color:  #007bff;">Menú</h5>
+          <!--     <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                       
+                        <a routerLink="/dashboard/dash" [ngClass]="isActive('/dashboard/dash') ? 'nav-link active' : 'nav-link'">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                        <h6 style="color:  #007bff;">Procesos</h6>
+
+                        <a *ngFor="let menu of menu_adm_proceso" [routerLink]="menu.url" [ngClass]="isActive(menu.url) ? 'nav-link active' : 'nav-link'">
+                            <i [ngClass]="menu.icono"></i>&nbsp;
+                            <p>{{menu.name}}</p>
+                        </a>
+
+
+
+                        <h6 style="color:  #007bff;">Parametros</h6>
+
+                        <a *ngFor="let menu of menu_adm_param" [routerLink]="menu.url" [ngClass]="isActive(menu.url) ? 'nav-link active' : 'nav-link'">
+                            <i [ngClass]="menu.icono"></i>&nbsp;
+                            <p>{{menu.name}}</p>
+                        </a>
+
+                        <h6 style="color:  #007bff;">Reportes</h6>
+
+                        <a *ngFor="let menu of menu_adm_reporte" [routerLink]="menu.url" [ngClass]="isActive(menu.url) ? 'nav-link active' : 'nav-link'">
+                            <i [ngClass]="menu.icono"></i>&nbsp;
+                            <p>{{menu.name}}</p>
+                        </a>
+
+                    </ul>
+                </nav>  -->
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+
+
+            <router-outlet></router-outlet>
+
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2024 <a>Jose Santos </a>.</strong> All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+    </div>
+
+</body>

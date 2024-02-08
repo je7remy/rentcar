@@ -1,0 +1,102 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-8">
+                <h1>Usuario</h1>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="search" [(ngModel)]="filtro" placeholder="Filtrar usuario" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4 text-letf">
+                        <br>
+
+                        <button (click)=" addusuario( 'add' ) " type="button" [tooltip]="'Agregar'" class="btn btn-info mr-1 mb-1 waves-effect waves-light"> <li class="fa fa-plus"></li>Agregar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body table-responsive">
+
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+
+                                    <th>Código </th>
+                                    <th>Nombre </th>
+                                    <th>Usuario </th>
+                                    <th>Titulo </th>
+                                    <th>Tipo usuario </th>
+                                    <th>Estado</th>
+                                    <th class="text-right">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of usuario | filter:'descripcion':filtro">
+
+
+                                    <td>{{item.id_usuario }}</td>
+                                    <td>{{item.nombre }}</td>
+                                    <td>{{item.usuario }}</td>
+                                    <td>{{item.titulo }}</td>
+                                    <td>{{item.tipo_usuario }}</td>
+                                    <td>
+                                        <div class="chip chip-success mr-1 text-center">
+                                            <div class=" chip-body ">
+                                                <span *ngIf=" item.estado==='A' " class=" badge btn-success ">Disponible</span>
+                                                <span *ngIf=" item.estado==='I' " class=" badge btn-danger ">No
+                                                    Disponible</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" text-right ">
+
+                                        <button (click)=" editusuario(item) " [tooltip]=" 'Editar' " class=" btn btn-icon btn-info mr-1 mb-1 waves-effect waves-light ">
+                                            <i class=" fas fa-pencil-alt "></i>
+                                        </button>
+
+                                        <a *ngIf=" item.estado==='I' " [tooltip]=" 'Activar' " type=" button " (click)=" Estadousuario(item, 'A' ) " class=" btn btn-icon btn-success mr-1 mb-1 waves-effect waves-light "><i
+                                                class=" fa fa-check-circle " style=" color:white "></i></a>
+                                        <a *ngIf=" item.estado==='A' " [tooltip]=" 'Inactivar' " type=" button " (click)=" Estadousuario(item, 'I' ) " class=" btn btn-icon btn-danger mr-1 mb-1 waves-effect waves-light "><i
+                                                class=" fa fa-trash " style=" color:white "></i></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+
+                                    <th>Código </th>
+                                    <th>Nombre </th>
+                                    <th>Usuario </th>
+                                    <th>Titulo </th>
+                                    <th>Tipo usuario </th>
+                                    <th>Estado</th>
+                                    <th class="text-right">Opciones</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

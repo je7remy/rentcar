@@ -1,0 +1,51 @@
+{
+  "name": "rentcar",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.2.12",
+    "@angular/common": "^16.2.12",
+    "@angular/compiler": "^16.2.12",
+    "@angular/core": "^16.2.12",
+    "@angular/forms": "^16.2.12",
+    "@angular/platform-browser": "^16.2.12",
+    "@angular/platform-browser-dynamic": "^16.2.12",
+    "@angular/router": "^16.2.12",
+    "@ng-bootstrap/ng-bootstrap": "^15.1.2",
+    "@ng-select/ng-select": "^11.2.0",
+    "@popperjs/core": "^2.11.6",
+    "@types/crypto-js": "^4.1.2",
+    "angular-calendar": "^0.31.0",
+    "bootstrap": "^5.2.3",
+    "crypto-js": "^4.1.1",
+    "date-fns": "^2.30.0",
+    "jspdf": "^2.5.1",
+    "ngx-pagination": "^6.0.3",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.6.13",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.9",
+    "@angular/cli": "~16.2.9",
+    "@angular/compiler-cli": "^16.2.12",
+    "@angular/localize": "^16.2.12",
+    "@types/jasmine": "~4.3.0",
+    "https-proxy-agent": "^7.0.2",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.9.4"
+  }
+}

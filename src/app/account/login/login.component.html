@@ -1,0 +1,60 @@
+<body class="login-page" style="min-height: 466px;">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" src="assets/logo.jpeg" alt="User profile picture">
+                </div>
+                <a class="h3"><b>Sistema de Rent Car</b></a>
+            </div>
+            <div class="card-body">
+                <p class="login-box-msg">Inicia sesión</p>
+
+                <form autocomplete="off" [formGroup]="forma" (ngSubmit)="login()">
+                    <div class="input-group mb-3">
+                        <input type="text" formControlName="codusuario" [class.is-invalid]="usuarioNoValido" class="form-control" placeholder="Usuario">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                            <small *ngIf="usuarioNoValido" class="text-danger"><i
+                          class="fafa-exclamation-triangle"></i>El
+                      usuario es Requerido</small>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Contraseña" formControlName="codclave" [class.is-invalid]="claveNoValido">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                            <small *ngIf="claveNoValido" class="text-danger"><i class="fa
+                    fa-exclamation-triangle"></i>La Contraseña es Requerida</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+
+
+</body>
