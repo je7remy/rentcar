@@ -56,7 +56,8 @@ export class LoginComponent implements OnInit {
         icon: 'info',
         text: 'Espere por favor...'
       });
-      Swal.showLoading();
+      Swal.showLoading(null);
+
 
       const foarr = this.forma.value;
 

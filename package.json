@@ -29,7 +29,7 @@
     "jspdf": "^2.5.1",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
-    "sweetalert2": "^11.6.13",
+    "sweetalert2": "^11.10.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
   },

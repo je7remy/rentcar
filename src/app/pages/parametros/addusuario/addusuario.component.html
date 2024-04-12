@@ -29,16 +29,10 @@
                 class="fa fa-exclamation-triangle"></i>El campo Nombre es requerido
         </small>
                             </div>
-                            <div class="form-group">
-                                <label for="id_puesto"> puesto</label>
-                                <select formControlName="id_puesto" name="id_puesto" id="id_puesto" [class.is-invalid]="id_puestoNoValido" class="form-control">
-            <option *ngFor="let item of  puesto" [value]="item.id_puesto"
-                selected>{{item.descripcion}}</option>
-        </select>
-                                <small *ngIf="id_puestoNoValido" class="form-text text-danger"><i
-                class="fa fa-exclamation-triangle"></i>El campo puesto es requerido
-        </small>
-                            </div>
+
+
+
+
                             <div class="form-group">
                                 <label for="usuario">Usuario</label>
                                 <input type="text" name="usuario" [class.is-invalid]="usuarioNoValido" formControlName="usuario" class="form-control" id="usuario" placeholder="Usuario de usuario">
@@ -53,20 +47,14 @@
                 class="fa fa-exclamation-triangle"></i>El campo Clave es requerido
         </small>
                             </div>
-                            <div class="form-group">
-                                <label for="titulo">Titulo</label>
-                                <input type="text" name="titulo" [class.is-invalid]="tituloNoValido" formControlName="titulo" class="form-control" id="titulo" placeholder="Titulo de usuario">
-                                <small *ngIf="tituloNoValido" class="form-text text-danger"><i
-                class="fa fa-exclamation-triangle"></i>El campo Titulo es requerido
-        </small>
-                            </div>
+
 
 
                             <div class="form-group">
                                 <label for="tipo_usuario">Tipo de Usuario</label>
                                 <select formControlName="tipo_usuario" name="tipo_usuario" id="tipo_usuario" [class.is-invalid]="tipo_usuarioNoValido" class="form-control">
-            <option value="ADM" selected>Administrativo</option>
-            <option value="USR">Secretaria</option>
+            <option value="ADM" selected>ADM</option>
+            <option value="USR">USR</option>
         </select>
                                 <small *ngIf="tipo_usuarioNoValido" class="form-text text-danger"><i
                 class="fa fa-exclamation-triangle"></i>El campo Tipo usuario  es requerido

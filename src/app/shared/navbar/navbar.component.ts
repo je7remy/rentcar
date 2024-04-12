@@ -35,13 +35,13 @@ export class NavbarComponent implements OnInit {
      this.tipo_usuario = this.login_data.tipo_usuario;
      this.nombre_usuario = this.login_data.nombre;
 
-if (this.tipo_usuario =="ADM"){
+if (this.tipo_usuario =="USR"){
      this.menu_adm_param = [
 { name: "Registro de usuario", url: "/dashboard/usuario", icono: "nav-icon fas fa-book" }, 
   ];
   
     this.menu_adm_proceso = [
-      { name: "Ingresos/Egresos", url: "/dashboard/ingresos_egresos", icono: "nav-icon fas fa-book" },
+      { name: "Ingresos/Egresos", url: "/dashboard/ingresosegresos", icono: "nav-icon fas fa-book" },
 
     ];
   
@@ -55,26 +55,26 @@ if (this.tipo_usuario =="ADM"){
 
     
     this.menu_adm_param = [
-   { name: "Registro de Empresa", url: "/dashboard/citas", icono: "nav-icon fas fa-th" },
-   { name: "Registro de Sucursal", url: "/dashboard/citas", icono: "nav-icon fas fa-th" },
-   { name: "Registro de Vehiculos", url: "/dashboard/citas", icono: "nav-icon fas fa-th" },
-   { name: "Registro de Clientes", url: "/dashboard/citas", icono: "nav-icon fas fa-th" },
-   { name: "Registro de Usuario", url: "/dashboard/citas", icono: "nav-icon fas fa-th" },
+   { name: "Registro de Empresa", url: "/dashboard/empresa", icono: "nav-icon fas fa-th" },
+   { name: "Registro de Sucursal", url: "/dashboard/sucursal", icono: "nav-icon fas fa-th" },
+   { name: "Registro de Vehiculos", url: "/dashboard/vehiculos", icono: "nav-icon fas fa-th" },
+   { name: "Registro de Clientes", url: "/dashboard/clientes", icono: "nav-icon fas fa-th" },
+   { name: "Registro de Usuario", url: "/dashboard/usuario", icono: "nav-icon fas fa-th" },
  ];
 
  this.menu_adm_proceso = [
-  { name: "Gastos", url: "/dashboard/cie10", icono: "nav-icon fas fa-book" },
-  { name: "Reservacion", url: "/dashboard/cie10", icono: "nav-icon fas fa-book" },
-  { name: "Factura", url: "/dashboard/cie10", icono: "nav-icon fas fa-book" },
-  { name: "Reparaciones", url: "/dashboard/cie10", icono: "nav-icon fas fa-book" },
+  { name: "Gastos", url: "/dashboard/gastos", icono: "nav-icon fas fa-book" },
+  { name: "Reservacion", url: "/dashboard/reservacion", icono: "nav-icon fas fa-book" },
+  { name: "Factura", url: "/dashboard/factura", icono: "nav-icon fas fa-book" },
+  { name: "Reparaciones", url: "/dashboard/reparaciones", icono: "nav-icon fas fa-book" },
  ];
 
 
  this.menu_adm_reporte = [
-   { name: "Egresos/Ingresos", url: "/dashboard/repcitas", icono: "nav-icon fas fa-file" },
-   { name: "Facturas", url: "/dashboard/repcitas", icono: "nav-icon fas fa-file" },
-   { name: "Clientes", url: "/dashboard/repcitas", icono: "nav-icon fas fa-file" },
-   { name: "Vehiculos Pendientes", url: "/dashboard/repcitas", icono: "nav-icon fas fa-file" },
+   { name: "Ingresos/Egresos", url: "/dashboard/ingresosegresos", icono: "nav-icon fas fa-file" },
+   { name: "Facturas", url: "/dashboard/facturas", icono: "nav-icon fas fa-file" },
+   { name: "Clientes", url: "/dashboard/cliente", icono: "nav-icon fas fa-file" },
+   { name: "Vehiculos Pendientes", url: "/dashboard/vehiculospendientes", icono: "nav-icon fas fa-file" },
 
  ];
    }

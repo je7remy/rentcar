@@ -29,7 +29,6 @@ export class AddusuarioComponent implements OnInit {
     this.id = this.encryp.decryptData(this.routes.snapshot.paramMap.get('id'));
 
 
-    this.getpuesto();
 
 
     if (this.id != 'add') {
@@ -41,10 +40,8 @@ export class AddusuarioComponent implements OnInit {
 
       this.forma.controls['id_usuario'].setValue(this.usuario.id_usuario);
       this.forma.controls['nombre'].setValue(this.usuario.nombre);
-      this.forma.controls['id_puesto'].setValue(this.usuario.id_puesto);
       this.forma.controls['usuario'].setValue(this.usuario.usuario);
       this.forma.controls['clave'].setValue(this.usuario.clave);
-      this.forma.controls['titulo'].setValue(this.usuario.titulo);
       this.forma.controls['tipo_usuario'].setValue(this.usuario.tipo_usuario);
       this.forma.controls['estado'].setValue(this.usuario.estado);
     }
@@ -54,10 +51,8 @@ export class AddusuarioComponent implements OnInit {
 
       id_usuario: [''],
       nombre: ['', [Validators.required]],
-      id_puesto: ['', [Validators.required]],
       usuario: ['', [Validators.required]],
       clave: ['', [Validators.required]],
-      titulo: ['', [Validators.required]],
       tipo_usuario: ['', [Validators.required]],
       estado: ['', [Validators.required]],
     });
@@ -70,18 +65,14 @@ export class AddusuarioComponent implements OnInit {
   get nombreNoValido() {
     return this.forma.get('nombre')!.invalid && this.forma.get('nombre')!.touched
   }
-  get id_puestoNoValido() {
-    return this.forma.get('id_puesto')!.invalid && this.forma.get('id_puesto')!.touched
-  }
+
   get usuarioNoValido() {
     return this.forma.get('usuario')!.invalid && this.forma.get('usuario')!.touched
   }
   get claveNoValido() {
     return this.forma.get('clave')!.invalid && this.forma.get('clave')!.touched
   }
-  get tituloNoValido() {
-    return this.forma.get('titulo')!.invalid && this.forma.get('titulo')!.touched
-  }
+ 
   get tipo_usuarioNoValido() {
     return this.forma.get('tipo_usuario')!.invalid && this.forma.get('tipo_usuario')!.touched
   }
@@ -96,28 +87,6 @@ export class AddusuarioComponent implements OnInit {
   }
 
   //armar por campos id_
-
-  getpuesto() {
-    let datos =
-    {
-      codigousuario: this.login_data.id_usuario,
-      jwt: '1'
-    }
-    this.serv.consultas(datos, 'puesto/listall.php')
-      .subscribe((resp: any) => {
-        if (resp.status) {
-          this.puesto = resp.data;
-          console.log(this.puesto);
-        }
-        else {
-          return
-        }
-
-      }, (err: any) => {
-        console.log(err);
-      });
-  }
-
 
 
 
@@ -168,10 +137,8 @@ export class AddusuarioComponent implements OnInit {
     let dato: any = {};
 
     dato['nombre'] = forma.nombre;
-    dato['id_puesto'] = forma.id_puesto;
     dato['usuario'] = forma.usuario;
     dato['clave'] = forma.clave;
-    dato['titulo'] = forma.titulo;
     dato['tipo_usuario'] = forma.tipo_usuario;
     dato['estado'] = forma.estado;
 
@@ -197,10 +164,8 @@ export class AddusuarioComponent implements OnInit {
 
     dato['id_usuario'] = forma.id_usuario;
     dato['nombre'] = forma.nombre;
-    dato['id_puesto'] = forma.id_puesto;
     dato['usuario'] = forma.usuario;
     dato['clave'] = forma.clave;
-    dato['titulo'] = forma.titulo;
     dato['tipo_usuario'] = forma.tipo_usuario;
     dato['estado'] = forma.estado;
 

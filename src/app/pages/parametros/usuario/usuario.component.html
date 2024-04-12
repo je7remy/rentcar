@@ -43,20 +43,18 @@
                                     <th>Código </th>
                                     <th>Nombre </th>
                                     <th>Usuario </th>
-                                    <th>Titulo </th>
                                     <th>Tipo usuario </th>
                                     <th>Estado</th>
                                     <th class="text-right">Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let item of usuario | filter:'descripcion':filtro">
+                                <tr *ngFor="let item of usuario | filter:'nombre':filtro">
 
 
                                     <td>{{item.id_usuario }}</td>
                                     <td>{{item.nombre }}</td>
                                     <td>{{item.usuario }}</td>
-                                    <td>{{item.titulo }}</td>
                                     <td>{{item.tipo_usuario }}</td>
                                     <td>
                                         <div class="chip chip-success mr-1 text-center">
@@ -87,7 +85,6 @@
                                     <th>Código </th>
                                     <th>Nombre </th>
                                     <th>Usuario </th>
-                                    <th>Titulo </th>
                                     <th>Tipo usuario </th>
                                     <th>Estado</th>
                                     <th class="text-right">Opciones</th>
