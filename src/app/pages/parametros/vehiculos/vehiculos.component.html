@@ -1,0 +1,121 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-8">
+                <h1>Vehículos</h1>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="search" [(ngModel)]="filtro" placeholder="Filtrar vehiculos" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-letf">
+                        <br>
+
+                        <button (click)=" agregarvehiculos( 'add' ) " type="button" [tooltip]="'Agregar'" class="btn btn-info mr-1 mb-1 waves-effect waves-light"> <li class="fa fa-plus"></li>Agregar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body table-responsive">
+
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código </th>
+                                    <th>Marca </th>
+                                    <th>Nombre </th>
+                                    <th>Descripción </th>
+                                    <th>Estado</th>
+                                    <th>Chasis</th>
+                                    <th>Color</th>
+                                    <th>Combustible</th>
+                                    <th>Modelo</th>
+                                    <th>Último Mantenimiento</th>
+                                    <th>Seguro</th>
+                                    <th>ID Usuario</th>
+                                    <th>Fecha</th>
+                                    <th>Seguro Vence</th>
+                                    <th class="text-right">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let vehiculo of vehiculos | filter:'nombre':filtro">
+                                    <td>{{vehiculo.idvehiculo}}</td>
+                                    <td>{{vehiculo.marca}}</td>
+                                    <td>{{vehiculo.nombre}}</td>
+                                    <td>{{vehiculo.descripcion}}</td>
+                                    <td>
+                                        <div class="chip chip-success mr-1 text-center">
+                                            <div class=" chip-body ">
+                                                <span *ngIf=" vehiculo.estado==='A' " class=" badge btn-success ">Disponible</span>
+                                                <span *ngIf=" vehiculo.estado==='I' " class=" badge btn-danger ">No
+                                                    Disponible</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{vehiculo.chasis}}</td>
+                                    <td>{{vehiculo.color}}</td>
+                                    <td>{{vehiculo.combustible}}</td>
+                                    <td>{{vehiculo.modelo}}</td>
+                                    <td>{{vehiculo.ultimomantenimiento}}</td>
+                                    <td>{{vehiculo.seguro}}</td>
+                                    <td>{{vehiculo.idusuario}}</td>
+                                    <td>{{vehiculo.fecha}}</td>
+                                    <td>{{vehiculo.segurovence}}</td>
+                                    <td class="text-right">
+                                        <button (click)="editarvehiculos(vehiculo)" [tooltip]="'Editar'" class="btn btn-icon btn-info mr-1 mb-1 waves-effect waves-light">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                        <a *ngIf="vehiculo.estado === 'inactivo'" [tooltip]="'Activar'" type="button" (click)="cambiarEstadovehiculos(vehiculo, 'activo')" class="btn btn-icon btn-success mr-1 mb-1 waves-effect waves-light">
+                                            <i class="fa fa-check-circle" style="color:white"></i>
+                                        </a>
+                                        <a *ngIf="vehiculo.estado === 'activo'" [tooltip]="'Inactivar'" type="button" (click)="cambiarEstadovehiculos(vehiculo, 'inactivo')" class="btn btn-icon btn-danger mr-1 mb-1 waves-effect waves-light">
+                                            <i class="fa fa-trash" style="color:white"></i>
+                                        </a>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Código </th>
+                                    <th>Marca </th>
+                                    <th>Nombre </th>
+                                    <th>Descripción </th>
+                                    <th>Estado</th>
+                                    <th>Chasis</th>
+                                    <th>Color</th>
+                                    <th>Combustible</th>
+                                    <th>Modelo</th>
+                                    <th>Último Mantenimiento</th>
+                                    <th>Seguro</th>
+                                    <th>ID Usuario</th>
+                                    <th>Fecha</th>
+                                    <th>Seguro Vence</th>
+                                    <th class="text-right">Opciones</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

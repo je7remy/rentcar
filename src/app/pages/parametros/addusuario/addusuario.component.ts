@@ -10,7 +10,7 @@ declare var $: any;
 @Component({
   selector: 'app-addusuario',
   templateUrl: './addusuario.component.html',
-  styleUrls: ['./addusuario.component.css']
+//  styleUrls: ['./addusuario.component.css']
 })
 export class AddusuarioComponent implements OnInit {
 

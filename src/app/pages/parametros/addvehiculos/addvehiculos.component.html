@@ -1,0 +1,137 @@
+<!-- Content Wrapper. Contains page content -->
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Agregar o editar Vehículo</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card ">
+                    <div class="card-header" style="background-color: #d9fae9;">
+                        <h3 class="card-title"><br> Datos del Vehículo</h3>
+                    </div>
+                    <form [formGroup]="forma" (ngSubmit)="guardar()">
+                        <div class="card-body">
+
+                                                    <div class="form-group">
+                            <label for="idvehiculo">ID Vehículo</label>
+                            <input type="number" name="idvehiculo" [class.is-invalid]="idvehiculoNoValido" formControlName="idvehiculo" class="form-control" id="idvehiculo" placeholder="ID Vehículo">
+                            <small *ngIf="idvehiculoNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo ID Vehículo es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="marca">Marca</label>
+                            <input type="text" name="marca" [class.is-invalid]="marcaNoValido" formControlName="marca" class="form-control" id="marca" placeholder="Marca del vehículo">
+                            <small *ngIf="marcaNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Marca es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" [class.is-invalid]="nombreNoValido" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre del vehículo">
+                            <small *ngIf="nombreNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Nombre es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea name="descripcion" [class.is-invalid]="descripcionNoValido" formControlName="descripcion" class="form-control" id="descripcion" placeholder="Descripción del vehículo"></textarea>
+                            <small *ngIf="descripcionNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Descripción es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select formControlName="estado" name="estado" id="estado" [class.is-invalid]="estadoNoValido" class="form-control">
+                                <option value="A" selected>Activo</option>
+                                <option value="I">Inactivo</option>
+                            </select>
+                            <small *ngIf="estadoNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Estado es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chasis">Chasis</label>
+                            <input type="text" name="chasis" [class.is-invalid]="chasisNoValido" formControlName="chasis" class="form-control" id="chasis" placeholder="Chasis del vehículo">
+                            <small *ngIf="chasisNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Chasis es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="color">Color</label>
+                            <input type="text" name="color" [class.is-invalid]="colorNoValido" formControlName="color" class="form-control" id="color" placeholder="Color del vehículo">
+                            <small *ngIf="colorNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Color es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="combustible">Combustible</label>
+                            <input type="text" name="combustible" [class.is-invalid]="combustibleNoValido" formControlName="combustible" class="form-control" id="combustible" placeholder="Combustible del vehículo">
+                            <small *ngIf="combustibleNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Combustible es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" name="modelo" [class.is-invalid]="modeloNoValido" formControlName="modelo" class="form-control" id="modelo" placeholder="Modelo del vehículo">
+                            <small *ngIf="modeloNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Modelo es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ultimomantenimiento">Último Mantenimiento</label>
+                            <input type="date" name="ultimomantenimiento" [class.is-invalid]="ultimomantenimientoNoValido" formControlName="ultimomantenimiento" class="form-control" id="ultimomantenimiento" placeholder="Último mantenimiento del vehículo">
+                            <small *ngIf="ultimomantenimientoNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Último Mantenimiento es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="seguro">Seguro</label>
+                            <select formControlName="seguro" name="seguro" id="seguro" [class.is-invalid]="seguroNoValido" class="form-control">
+                                <option value="1" selected>Si</option>
+                                <option value="0">No</option>
+                            </select>
+                            <small *ngIf="seguroNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Seguro es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idusuario">ID Usuario</label>
+                            <input type="number" name="idusuario" [class.is-invalid]="idusuarioNoValido" formControlName="idusuario" class="form-control" id="idusuario" placeholder="ID Usuario">
+                            <small *ngIf="idusuarioNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo ID Usuario es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" name="fecha" [class.is-invalid]="fechaNoValido" formControlName="fecha" class="form-control" id="fecha" placeholder="Fecha">
+                            <small *ngIf="fechaNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Fecha es requerido</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="segurovence">Seguro Vence</label>
+                            <input type="date" name="segurovence" [class.is-invalid]="segurovenceNoValido" formControlName="segurovence" class="form-control" id="segurovence" placeholder="Seguro Vence">
+                            <small *ngIf="segurovenceNoValido" class="form-text text-danger"><i class="fa fa-exclamation-triangle"></i> El campo Seguro Vence es requerido</small>
+                        </div>
+
+                    </div>
+                  
+                        <div class="card-footer">
+                            <div class="col">
+
+                                <button routerLink="/dashboard/vehiculos" class="btn btn-secondary mr-1 mb-1 waves-effect waves-light">
+                                    <i class="fa fa-window-close"></i>
+                                    Cancelar
+                                </button>
+
+                                <button type="submit" class="btn btn-info mr-1 mb-1 waves-effect waves-light">
+                                    <i class="fa fa-save"></i>
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

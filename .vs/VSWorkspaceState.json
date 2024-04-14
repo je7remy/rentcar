@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\parametros",
+    "\\src\\app\\pages\\parametros\\addusuario",
+    "\\src\\app\\pages\\parametros\\usuario"
+  ],
+  "SelectedNode": "\\src\\app\\pages\\parametros\\addusuario\\addusuario.component.ts",
+  "PreviewInSolutionExplorer": false
+}

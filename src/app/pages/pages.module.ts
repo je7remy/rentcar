@@ -10,6 +10,10 @@ import { UsuarioComponent } from './parametros/usuario/usuario.component';
 
 import { AddusuarioComponent } from './parametros/addusuario/addusuario.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { VehiculosComponent } from './parametros/vehiculos/vehiculos.component';
+import { AddvehiculosComponent } from './parametros/addvehiculos/addvehiculos.component';
+import { ClientesComponent } from './parametros/clientes/clientes.component';
+import { AddclientesComponent } from './parametros/addclientes/addclientes.component';
 
 
 @NgModule({
@@ -19,6 +23,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     NotImagePipe,
     UsuarioComponent,
     AddusuarioComponent,
+    VehiculosComponent,
+    AddvehiculosComponent,
+    ClientesComponent,
+    AddclientesComponent,
    
   ],
   imports: [
