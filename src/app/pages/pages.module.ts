@@ -14,6 +14,7 @@ import { VehiculosComponent } from './parametros/vehiculos/vehiculos.component';
 import { AddvehiculosComponent } from './parametros/addvehiculos/addvehiculos.component';
 import { ClientesComponent } from './parametros/clientes/clientes.component';
 import { AddclientesComponent } from './parametros/addclientes/addclientes.component';
+import { RepclientesComponent } from './parametros/repclientes/repclientes.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AddclientesComponent } from './parametros/addclientes/addclientes.compo
     AddvehiculosComponent,
     ClientesComponent,
     AddclientesComponent,
+    RepclientesComponent,
    
   ],
   imports: [

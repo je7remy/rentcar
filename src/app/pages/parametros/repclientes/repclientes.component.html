@@ -1,0 +1,162 @@
+<!-- Content Wrapper. Contains page content -->
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Reporte de Cliente</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"><br> Reporte de Cliente</h3>
+                    </div>
+                    <form [formGroup]="forma" (ngSubmit)="generar()">
+                        <div class="card-body">
+
+
+
+                            <div class="form-group">
+                                <label for="id_cliente"> Cliente:</label>
+                                <select formControlName="id_cliente" name="id_cliente" id="id_cliente" class="form-control">
+<option *ngFor="let item of  cliente" [value]="item.id_cliente">{{item.nombre}}</option>
+</select>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="direccion">Estado:</label>
+                                <select formControlName="estado" name="estado" id="estado" class="form-control">
+                           <option value="A" selected>Activo</option>
+                           <option value="I">Inactivo</option>
+                           <option value="%">Todos</option>
+                       </select>
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <div class="col">
+                                <button (click)="getreporte()" type="submit" class="btn btn-info mr-1 mb-1 waves-effect waves-light">
+                        <i class="fa fa-search"></i>
+                        Visualizar
+                    </button>
+                                <button (click)="generarpdf()" class="btn btn-success mr-1 mb-1 waves-effect waves-light">
+                     <i class="fa fa-save"></i>
+                     Generar PDF
+                 </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section *ngIf="muestra">
+    <div class="wrapper" id="htmlData">
+        <!-- Main content -->
+        <section class="invoice">
+            <!-- title row -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="page-header">
+                        <i class="fas fa-globe"></i> Sistema Cambio RenTcar
+                        <small class="float-right">Fecha: {{fecha}} <br>Cliente: {{nombre_cliente}}</small>
+
+                    </h2>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- info row -->
+            <div class="row invoice-info">
+                <div class="col-sm-4 invoice-col">
+
+                    <address>
+     <br><br>
+<strong>Reporte de Cliente</strong>
+<br>
+</address>
+                </div>
+
+            </div>
+            <!-- /.row -->
+            <!-- Table row -->
+            <div class="row">
+                <div class="col-12 table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Sexo</th>
+                                <th>WhatsApp</th>
+                                <th>Correo</th>
+                                <th>Teléfono 1</th>
+                                <th>Teléfono 2</th>
+                                <th>Estado</th>
+                                <th>Tipo Identificación</th>
+                                <th>Número Identificación</th>
+                                <th>Usuario Registro</th>
+                                <th>Fecha Registro</th>
+                                <th>Usuario Modificado</th>
+                                <th>Fecha Modificado</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of reporte">
+
+                                <td>{{item.id_cliente}}</td>
+                                <td>{{item.nombre}}</td>
+                                <td>{{item.apellido}}</td>
+                                <td>{{item.sexo}}</td>
+                                <td>{{item.whatsapp}}</td>
+                                <td>{{item.correo}}</td>
+                                <td>{{item.telefono1}}</td>
+                                <td>{{item.telefono2}}</td>
+                                <td>{{item.estado}}</td>
+                                <td>{{item.tipo_identificacion}}</td>
+                                <td>{{item.numero_identificacion}}</td>
+                                <td>{{item.usuario_registro}}</td>
+                                <td>{{item.fecha_registro}}</td>
+                                <td>{{item.usuario_modificado}}</td>
+                                <td>{{item.fecha_modificado}}</td>
+                               
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <!-- accepted payments column -->
+                <div class="col-6">
+                    <b class="lead">Cantidad total: {{this.cant}}</b>
+
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- ./wrapper -->
+
+</section>

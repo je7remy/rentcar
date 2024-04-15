@@ -9,6 +9,7 @@ import { VehiculosComponent } from './pages/parametros/vehiculos/vehiculos.compo
 import { AddvehiculosComponent } from './pages/parametros/addvehiculos/addvehiculos.component';
 import { ClientesComponent } from './pages/parametros/clientes/clientes.component';
 import { AddclientesComponent } from './pages/parametros/addclientes/addclientes.component';
+import { RepclientesComponent } from './pages/parametros/repclientes/repclientes.component';
 
 
 
@@ -20,9 +21,10 @@ const routes: Routes = [
       { path: 'dash', component: DashboardComponent },
       { path: 'usuario', component: UsuarioComponent },
       { path: 'clientes', component: ClientesComponent },
-      { path: 'addclientes/:id', component: AddclientesComponent },
+      { path: 'clientes/:id', component: AddclientesComponent },
       { path: 'vehiculos', component: VehiculosComponent },
-      { path: 'addvehiculos/:id', component: AddvehiculosComponent },
+      { path: 'vehiculos/:id', component: AddvehiculosComponent },
+      { path: 'repclientes', component: RepclientesComponent },
       { path: 'usuario/:id', component: AddusuarioComponent }
     ]
   },

@@ -73,7 +73,7 @@ if (this.tipo_usuario =="USR"){
  this.menu_adm_reporte = [
    { name: "Ingresos/Egresos", url: "/dashboard/ingresosegresos", icono: "nav-icon fas fa-file" },
    { name: "Facturas", url: "/dashboard/facturas", icono: "nav-icon fas fa-file" },
-   { name: "Clientes", url: "/dashboard/cliente", icono: "nav-icon fas fa-file" },
+   { name: "Clientes", url: "/dashboard/repclientes", icono: "nav-icon fas fa-file" },
    { name: "Vehiculos Pendientes", url: "/dashboard/vehiculospendientes", icono: "nav-icon fas fa-file" },
 
  ];
