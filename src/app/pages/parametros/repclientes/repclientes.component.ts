@@ -24,7 +24,7 @@ cliente: any;
  nombre_cliente="";
 constructor(private encryp: EncdescService, private fb: FormBuilder, private serv: DataService, private route: Router, private routes: ActivatedRoute) {
 }
-citas: any;
+
 login_data: any;
 id!: string | null;
 forma!: FormGroup;
@@ -96,6 +96,8 @@ let datos =
 }
 
 console.log(datos);
+
+// 'reporte/lisrepcliente.php'
 this.serv.consultas(datos, 'reporte/lisrepcliente.php')
   .subscribe((resp: any) => {
    console.log(resp);

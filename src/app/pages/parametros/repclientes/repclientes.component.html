@@ -73,7 +73,7 @@
                 <div class="col-12">
                     <h2 class="page-header">
                         <i class="fas fa-globe"></i> Sistema Cambio RenTcar
-                        <small class="float-right">Fecha: {{fecha}} <br>Cliente: {{nombre_cliente}}</small>
+                        <small class="float-right">Fecha: {{fecha}} <br>Usuario: {{nombre_cliente}}</small>
 
                     </h2>
                 </div>
@@ -105,7 +105,7 @@
                                 <th>Sexo</th>
                                 <th>WhatsApp</th>
                                 <th>Correo</th>
-                                <th>Teléfono 1</th>
+                                <!-- <th>Teléfono 1</th> -->
                                 <th>Teléfono 2</th>
                                 <th>Estado</th>
                                 <th>Tipo Identificación</th>
@@ -118,7 +118,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of reporte">
+                            <tr *ngFor="let item of cliente">
 
                                 <td>{{item.id_cliente}}</td>
                                 <td>{{item.nombre}}</td>
@@ -126,9 +126,9 @@
                                 <td>{{item.sexo}}</td>
                                 <td>{{item.whatsapp}}</td>
                                 <td>{{item.correo}}</td>
-                                <td>{{item.telefono1}}</td>
+                                <!-- <td>{{item.telefono1}}</td> -->
                                 <td>{{item.telefono2}}</td>
-                                <td>{{item.estado}}</td>
+                                 <td>{{item.estado}}</td>                            
                                 <td>{{item.tipo_identificacion}}</td>
                                 <td>{{item.numero_identificacion}}</td>
                                 <td>{{item.usuario_registro}}</td>
