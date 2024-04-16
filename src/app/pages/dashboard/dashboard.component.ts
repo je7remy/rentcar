@@ -21,15 +21,13 @@ export class DashboardComponent {
  login_data: any;
  forma!: FormGroup;
 
-
-
  monto1: any;
-monto2: any;
-monto3: any;
-monto4: any;
-tblcitas: any;
-tblconsultas: any;
+ monto2: any;
+ monto3: any;
+ monto4: any;
 
+ tblcitas: any;
+ tblconsultas: any;
 
  ngOnInit(): void {
    this.login_data = this.encryp.decryptData(localStorage.getItem('meta'));
@@ -48,12 +46,12 @@ tblconsultas: any;
       console.log(resp);
        if (resp.status) {
        
-          this.monto1= resp.monto1;
-          this.monto2= resp.cantidadcitas;
-          this.monto3= resp.cantidadconsultas;
-          this.monto4= resp.cantidadcitasvencidas;
-          this.tblcitas= resp.tblcitas;
-          this.tblconsultas= resp.tblconsultas;
+          this.monto1= resp.cantidadusuario1;
+          this.monto2= resp.cantidadusuario2;
+          this.monto3= resp.cantidadusuario3;
+          this.monto4= resp.cantidadusuario4;
+          this.tblcitas= resp.tblusuario1;
+          this.tblconsultas= resp.tblusuario2;
        }
        else {
          return

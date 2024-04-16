@@ -98,7 +98,7 @@
 
                     <div class="card">
                         <div class="card-header border-0">
-                            <h3 class="card-title">Tasas en el dia</h3>
+                            <h3 class="card-title">Usuarios</h3>
                             <div class="card-tools">
 
                             </div>
@@ -107,18 +107,17 @@
                             <table class="table table-striped table-valign-middle">
                                 <thead>
                                     <tr>
-                                        <th>Moneda</th>
-                                        <th>Tasa cambio</th>
-                                        <th>Tasa venta</th>
+                                        <th>Codigo</th>
+                                        <th>Nombre</th>
+                                        <th>Usuario</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let item of tblcitas">
 
+                                        <td>{{item.id_usuario}}</td>
                                         <td>{{item.nombre}}</td>
-                                        <td>
-                                            {{item.horario}}
-                                        </td>
+                                        <td>{{item.usuario}} </td>
 
                                     </tr>
 
@@ -141,18 +140,16 @@
                             <table class="table table-striped table-valign-middle">
                                 <thead>
                                     <tr>
-                                        <th>Moneda</th>
-                                        <th>Cantidad</th>
-                                        <th>Monto</th>
+                                        <th>Codigo</th>
+                                        <th>Nombre</th>
+                                        <th>Usuario</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let item of tblconsultas">
-
+                                        <td>{{item.id_usuario}}</td>
                                         <td>{{item.nombre}}</td>
-                                        <td>
-                                            {{item.monto}}
-                                        </td>
+                                        <td>{{item.usuario}} </td>
 
                                     </tr>
 
